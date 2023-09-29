@@ -1,5 +1,6 @@
 const { Printer } = require("@node-escpos/core");
 const express = require("express");
+var ssp = require("ssp");
 const USB = require("@node-escpos/usb-adapter");
 const app = express();
 
@@ -23,7 +24,6 @@ app.get("/print", async (req, res) => {
   }
 });
 
-var ssp = require("ssp");
 var notes = {
   1: "1TMT",
   2: "5TMT",
